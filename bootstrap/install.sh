@@ -13,10 +13,16 @@ link_path() {
     return
   fi
 
-  if [ -e "$target_path" ] || [ -L "$target_path" ]; then
-    backup_path="$target_path.backup.$(date +%Y%m%d%H%M%S)"
+  if [ -f "$target_path" ] && [ ! -L "$target_path" ]; then
+    backup_path="$target_path.backup.$(date +%Y%m%d%H%M%S).$$"
+    cp -p "$target_path" "$backup_path"
+    cmp -s "$target_path" "$backup_path"
+    rm "$target_path"
+    printf 'backed up existing file %s to %s\n' "$target_path" "$backup_path"
+  elif [ -e "$target_path" ] || [ -L "$target_path" ]; then
+    backup_path="$target_path.backup.$(date +%Y%m%d%H%M%S).$$"
     mv "$target_path" "$backup_path"
-    printf 'moved existing %s to %s\n' "$target_path" "$backup_path"
+    printf 'moved existing path %s to %s\n' "$target_path" "$backup_path"
   fi
 
   ln -s "$source_path" "$target_path"

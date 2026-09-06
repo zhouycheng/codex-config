@@ -11,7 +11,7 @@ git clone <private-repository-url> ~/src/codex-config
 ~/src/codex-config/bootstrap/install.sh
 ```
 
-安装脚本会把标准读取路径链接到本仓库；已有文件会先改名备份，不会直接覆盖。
+安装脚本会把标准读取路径链接到本仓库。已有实体文件会先复制并校验备份，随后删除原文件并创建链接；其他已有路径会先改名备份，不会直接覆盖。
 
 ## 本机差异
 
