@@ -1,13 +1,15 @@
 # 本机能力索引
 
-本目录记录会话能力目录之外、值得复用的本机工具和资源入口。它是定位线索，不是强制工具清单；使用前仍以当前环境核实可用性。
+这里记录会话能力目录之外、已经在本机核验过的工具入口。它用于快速定位工具，不替代项目规则，也不保证后台服务、账号或额度始终可用。
 
-按任务读取对应说明，不必读取全部文件。
+按任务读取对应文件：
 
 | 任务 | 说明文件 | 内容 |
 | --- | --- | --- |
-| 文档、PDF、表格和交付文件 | [documents.md](documents.md) | 转换、渲染、模板和检查入口 |
-| 开发、运行和代码检查 | [development.md](development.md) | 运行时、CLI、共享脚本和验证入口 |
-| 公开资料和研究 | [research.md](research.md) | 浏览、资料处理和证据保存入口 |
+| 开发、运行、代码检查和自动化 | [development.md](development.md) | 95 个 CLI、9 个 Codex MCP、FreeCAD 和运行条件 |
+| 文档、PDF、表格和交付文件 | [documents.md](documents.md) | 转换、渲染、OCR、媒体和页面检查入口 |
+| 公开资料和研究 | [research.md](research.md) | Browser、Firecrawl、GitHub 和证据保存入口 |
 
-如果存在 `~/.codex/environment/local.md`，涉及本机专属路径、应用、私有服务或设备能力时再读取它。该文件不提交到配置仓库。
+最近一次完整核验：2026 年 9 月 8 日。
+
+如果存在 `~/.codex/environment/local.md`，只有在任务涉及设备专属路径、应用、私有服务或硬件时才读取。该文件不提交到仓库。
