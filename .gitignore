@@ -10,6 +10,7 @@ credentials/
 cookies/
 sessions/
 cache/
+.firecrawl/
 
 # macOS/editor noise
 .DS_Store
